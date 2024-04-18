@@ -45,7 +45,7 @@
 
 <body>
 
-<div class="page-wrapper" style="width: 100%;">
+<main class="page-wrapper" style="width: 100%;">
 
 
     <!-- Main Header -->
@@ -327,7 +327,7 @@
                 </div>
                 </div>
             </div>
-        </div>
+        </main>
     </section>
 
     <!-- what we do section -->
@@ -579,11 +579,15 @@
         .countdown-wrapper {
             display: flex;
             justify-content: center;
+            gap: 1.25em;
             align-items: center;
         }
     
         .countdown-item {
-            margin: 0 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 0.5em;
             padding: 20px;
             background-color: #f3bb05;
             border-radius: 10px;
@@ -599,6 +603,25 @@
         .countdown-label {
             font-size: 18px;
             color: #fff;
+        }
+
+        @media screen and (max-width: 620px) {
+            .countdown-wrapper {
+                gap: 0.6em;
+            }
+
+            .countdown-item {
+                gap: unset;
+                padding: 10px;
+            }
+
+            .countdown-value {
+                font-size: 1.5rem;
+            }
+
+            .countdown-label {
+                font-size: 0.76rem;
+            }
         }
     </style>
     
